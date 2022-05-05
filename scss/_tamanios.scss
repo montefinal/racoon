@@ -1,0 +1,9 @@
+@mixin tamanio ($ancho, $alto){
+width: $ancho;
+height: $alto;
+}
+
+@mixin margpad ($marg, $pad){
+    margin: $marg;
+    padding: $pad;
+    }

@@ -1,0 +1,104 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*IMPORT*/
+/*GENERALES*/
+@import "colores";
+@import "grids";
+@import "tamanios";
+
+ /*INDEX*/
+.grid-1 {
+    @include margpad(10px, 10px)
+ }
+ .section1{
+     @include margpad(10px, 5px)
+ }
+ .indeximg{
+     max-width: 100%;
+ }
+
+/*FORMATOS*/
+
+.formatos {
+    margin-top: 80px; 
+}
+.sectionform {
+    background-color: map-get($colores,gris1);
+    text-align: center;
+    margin: 50px;
+}
+.sectiontitle {
+    color: map-get($colores,blanco);
+    @include margpad(10px, 10px)
+}
+.sectionp {
+    @extend .sectiontitle;
+    font-size: 20px;
+}
+.formatimg{
+    width: 100%;
+}
+
+
+/*CONTACTO*/
+.maincont{
+    display: flex;
+    height: 94vh;
+}
+.contacto {
+    background-color: grey;
+    width: 450px;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.titulocontacto {
+    color:map-get($colores,gris2);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    font-size: 20px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.botton {
+    background-color: map-get($colores,gris1);
+    padding: 20px;
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/*FOOTER*/
+footer{
+    @include tamanio (100%, 70px);
+    text-align: center;
+    padding-top: 10px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    img{
+        width: 50px; height: 50px;
+        margin: 0px 30px;
+        border: none;
+    }
+}
